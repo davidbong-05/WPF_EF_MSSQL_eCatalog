@@ -1,0 +1,49 @@
+<UserControl x:Class="WPF_EF_MSSQL_eCatalog.Views.UserControls.AppBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:WPF_EF_MSSQL_eCatalog.Views.UserControls"
+    xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+    mc:Ignorable="d"
+    Height="50"
+    d:DesignWidth="800">
+
+    <Grid Background="DarkBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="e-Catalog"
+            VerticalAlignment="Center"
+            Foreground="White"
+            Margin="10,0,0,0"
+            FontSize="18" />
+        <Menu Grid.Column="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right"
+            Background="Transparent">
+            <Menu.Resources>
+                <Style TargetType="MenuItem">
+                    <Setter Property="Background"
+                        Value="Transparent" />
+                    <Setter Property="FontSize"
+                        Value="18" />
+                    <Setter Property="BorderBrush"
+                        Value="Transparent" />
+                    <Setter Property="Margin"
+                        Value="10,0,10,0"/>
+                </Style>
+            </Menu.Resources>
+            <MenuItem Header="{fa:Icon Search, Foreground=White}"/>
+            <MenuItem Header="{fa:Icon ShoppingCart, Foreground=White}" />
+            <MenuItem Header="{fa:Icon EllipsisV, Foreground=White}">
+                <MenuItem Header="Get Data"
+                    Click="menuGetData_Click"/>
+                <MenuItem Header="Quit"
+                    Click="menuQuit_Click"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+
+</UserControl>

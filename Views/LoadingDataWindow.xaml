@@ -1,0 +1,30 @@
+<Window x:Class="WPF_EF_MSSQL_eCatalog.Views.LoadingDataWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:WPF_EF_MSSQL_eCatalog.Views"
+    mc:Ignorable="d"
+    Title="Loading"
+    WindowStartupLocation="CenterOwner"
+    Height="250"
+    Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Trying to fetch data from api... ..."
+            Foreground="Black"
+            FontSize="25"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center" />
+        <ProgressBar Grid.Row="1"
+            Name="MyProgressBar"
+            Value="0"
+            Minimum="0"
+            Maximum="100"
+            Width="350"
+            Height="30"/>
+    </Grid>
+</Window>
