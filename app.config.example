@@ -1,0 +1,10 @@
+<configuration>
+    <appSettings>
+        <add key="USERNAME"
+            value="<YOUR_API_USERNAME>" />
+        <add key="PASSWORD"
+            value="<YOUR_API_PASSWORD>" />
+        <add key="API_URL"
+            value="<YOUR_API_URL>" />
+    </appSettings>
+</configuration>
